@@ -293,28 +293,6 @@ This lab is intended for **educational purposes** and **authorized security test
 
 ---
 
-## 👤 Author
-
-**Izzath Inayathullah**
-Aspiring Cybersecurity Professional — B084
-
-- GitHub: [IzzathInayathullah](https://github.com/IzzathInayathullah)
-- LinkedIn: [IzzathInayathullah](https://linkedin.com/in/IzzathInayathullah)
-
----
-
-## 📌 Project Information
-
-| Field | Value |
-|---|---|
-| **Assignment** | WK1-PM1 — Week 1, Project Module 1 |
-| **Project** | Cybersecurity Lab Environment Setup |
-| **Repository** | `NetworkWalks-Izzath-B084-WK1-PM1-CyberSecurity-Lab-Setup` |
-| **Environment** | Windows 11 · Oracle VirtualBox 7.1.4 · Kali Linux 2023.2 |
-
-This project establishes a foundation for future cybersecurity labs, practical exercises, and GitHub portfolio development.
-
----
 
 ## ⚠️ Disclaimer
 
