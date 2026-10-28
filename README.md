@@ -105,7 +105,7 @@ Opened Oracle VirtualBox and created a dedicated NAT Network for the cybersecuri
 6. Attached the Kali Linux virtual machine to the intended NAT Network.
 7. Verified that the selected network configuration matches the lab requirements.
 
-![VirtualBox NAT Network Settings](./images/virtualbox-network-settings.png)
+![VirtualBox NAT Network Settings](./images/07-virtualbox-network-settings.png)
 
 > **Note:** A NAT Network provides virtual networking and outbound connectivity, but it should not automatically be considered a fully isolated security boundary. Review network connectivity and access settings before performing security experiments.
 
@@ -126,7 +126,7 @@ The Kali Linux virtual machine was downloaded from the official Kali Linux websi
 | Promiscuous Mode | Allow All |
 | Cable Connected | ✔️ Enabled |
 
-![Kali VM Network Configuration](./images/virtualbox-network-settings.png)
+![Kali VM Network Configuration](./images/04-virtualbox-network-settings.png)
 
 **Virtual machine resource allocation:**
 
