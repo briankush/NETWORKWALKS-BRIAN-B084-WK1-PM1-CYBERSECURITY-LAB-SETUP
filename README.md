@@ -105,7 +105,7 @@ Opened Oracle VirtualBox and created a dedicated NAT Network for the cybersecuri
 6. Attached the Kali Linux virtual machine to the intended NAT Network.
 7. Verified that the selected network configuration matches the lab requirements.
 
-![VirtualBox NAT Network Settings](./images/vbox-natnetwork.png)
+![VirtualBox NAT Network Settings](./images/virtualbox-network-settings.png)
 
 > **Note:** A NAT Network provides virtual networking and outbound connectivity, but it should not automatically be considered a fully isolated security boundary. Review network connectivity and access settings before performing security experiments.
 
@@ -126,7 +126,7 @@ The Kali Linux virtual machine was downloaded from the official Kali Linux websi
 | Promiscuous Mode | Allow All |
 | Cable Connected | ✔️ Enabled |
 
-![Kali VM Network Configuration](./images/kali-network-adapter.png)
+![Kali VM Network Configuration](./images/virtualbox-network-settings.png)
 
 **Virtual machine resource allocation:**
 
@@ -136,7 +136,6 @@ The Kali Linux virtual machine was downloaded from the official Kali Linux websi
 | Base Memory | 2048 MB (VirtualBox baseline) |
 | Nested Paging | ✔️ Enabled |
 
-![Kali Linux Desktop](./images/kali-desktop.png)
 
 ### Step 5: Configure the Kali Linux Network
 
@@ -148,7 +147,7 @@ Inspected the Kali Linux network settings through the graphical network settings
 4. Set the IP address to **`10.0.0.2/24`** with gateway **`10.0.0.1`** and DNS **`8.8.8.8`**.
 5. Verified that the connection is active.
 
-![Kali Linux Network Configuration](./images/kali-network-config.png)
+![Kali Linux Network Configuration](./images/network-configuration.png)
 
 ### Step 6: Configure a Shared Folder
 
@@ -163,15 +162,13 @@ A VirtualBox shared folder was used to transfer screenshots and documentation be
    - **Access:** Full
 4. Confirmed that Kali Linux can access the shared folder.
 
-![Shared Folders Configuration](./images/vbox-shared-folders.png)
-
 ### Step 7: Take a Clean VM Snapshot
 
 A clean snapshot of the Kali Linux virtual machine provides a recovery point before performing cybersecurity lab exercises. It can help restore the VM to its saved state if a future experiment causes unexpected configuration changes.
 
 The clean snapshot was created using Oracle VirtualBox's snapshot functionality (`Machine → Take Snapshot`).
 
-![Kali Linux Virtual Machine and Clean Snapshot](./images/kali-snapshot.png)
+![Kali Linux Virtual Machine and Clean Snapshot](./images/snapshot.png)
 
 > **Verification:** The screenshot documents the Kali Linux virtual machine and its clean snapshot in Oracle VirtualBox. The snapshot can be used as a recovery point before future lab activities.
 
@@ -225,19 +222,6 @@ The following table records the network values configured for the Kali Linux lab
 | Gateway | `10.0.0.1` |
 | DNS | `8.8.8.8` |
 
----
-
-## ✅ Verification Checklist
-
-- [ ] VirtualBox installed and running
-- [ ] `NatNetwork` created on `10.0.0.0/24` with DHCP enabled
-- [ ] Kali imported and attached to `NatNetwork`
-- [ ] Kali IP configured as `10.0.0.2/24`
-- [ ] Kali has full internet access
-- [ ] Clipboard (bidirectional) works host ↔ Kali
-- [ ] Drag & drop (bidirectional) works
-- [ ] `/downloads` shared folder auto-mounts in Kali
-- [ ] Clean snapshot taken of the Kali VM
 
 ---
 
@@ -261,16 +245,23 @@ During lab setup and verification, the following troubleshooting approaches are 
 
 ## 💡 What I Learned
 
-Through this project, I developed practical familiarity with:
+This project strengthened my ability to design, configure, and document a controlled
+virtual environment for cybersecurity practice. Key outcomes included:
 
-- Preparing a virtualization environment on Windows 11.
-- Importing and running Kali Linux in Oracle VirtualBox.
-- Creating a dedicated NAT Network for cybersecurity lab use.
-- Inspecting Linux network settings and testing basic connectivity.
-- Using a web browser to check network access.
-- Creating and documenting a clean virtual machine snapshot.
-- Organizing project screenshots and technical documentation for GitHub.
-- Preparing a foundation for future cybersecurity practice and portfolio projects.
+- **Virtual infrastructure:** Deployed Kali Linux in Oracle VirtualBox and allocated
+  appropriate resources for repeatable lab use.
+- **Network configuration:** Designed a dedicated NAT Network and configured the
+  guest interface with the required addressing, gateway, and DNS settings.
+- **Connectivity validation:** Applied a structured verification process to confirm
+  interface configuration, gateway reachability, external connectivity, and DNS
+  resolution.
+- **Operational resilience:** Created a clean VM snapshot and configured shared
+  resources to support safe experimentation and efficient recovery.
+- **Technical communication:** Translated configuration decisions, verification
+  steps, and troubleshooting procedures into clear documentation suitable for
+  technical review and future lab maintenance.
+- **Security practice:** Reinforced the importance of authorization, isolation, and
+  controlled recovery when preparing environments for ethical security testing.
 
 ---
 
